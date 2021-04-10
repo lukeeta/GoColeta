@@ -31,10 +31,18 @@ body{
     font-family: var(--font-primary);
     color: var(--font-color-primary);
 }
+.container{
+    max-width: 1200px;
+    width: 95%;
+    margin: 0 auto;
+}
 .display-center{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.display-none{
+    display: none!important;
 }
 .btn{
     display: flex;
@@ -67,6 +75,57 @@ body{
 .txt-secundary-dark{
     color: var(--color-secundary-dark);
 }
+
+
+header.main-menu {
+    background: var(--color-secundary);
+    border-bottom: 20px solid var(--color-primary);
+    height: 400px;
+}
+header.main-menu nav.menuPrincipal {
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+header.main-menu nav.menuPrincipal ul{
+    display: flex;
+    list-style:none;
+}
+header.main-menu nav.menuPrincipal ul li a{
+    display: flex;
+    padding: 10px 20px;
+    margin: 0 5px;
+    text-decoration: none;
+    color: var(--color-white);
+    text-transform: uppercase;
+    position: relative;
+    transition: opacity .2s ease-in-out;
+}
+header.main-menu nav.menuPrincipal ul li a::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    transform: scaleX(0);
+    background: var(--color-white);
+    transition: transform .2s ease-in-out;
+}
+header.main-menu nav.menuPrincipal ul li a:hover{
+    opacity: 0.7;
+}
+header.main-menu nav.menuPrincipal ul li a:hover::after{
+    transform-origin: center;
+    transform: scaleX(1);
+}
+
+
+
 /* Home */
 body.home{
     height: 100vh;
@@ -143,4 +202,164 @@ body.home #appRoot .heroContent .heroContentBtns{
 body.home #appRoot #copyright{
     text-align: center;
     margin-bottom: 15px;
+}
+/* 
+
+================================================
+Pontos de Retirada
+================================================
+
+*/
+body.ponto-de-retirada .map-container{
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: -250px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+body.ponto-de-retirada .pontos{
+    margin: 25px auto 50px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+body.ponto-de-retirada .pontos .card{
+    width: 100%;
+    box-shadow: 0 4px 18px -12px rgba(0,0,0,.5);
+    border-radius: 10px;
+    padding: 25px;
+    border: 1px solid rgba(219, 219, 219, 0.55);
+}
+body.ponto-de-retirada .pontos .card h3{
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 2.5px solid var(--color-secundary);
+    color: var(--color-secundary-dark);
+    text-transform: uppercase;
+    font-size: 22px;
+    width: 80%;
+    position: relative;
+}
+body.ponto-de-retirada .pontos .card h3::after{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    height: 2.5px;
+    width: 80%;
+    background: var(--color-primary);
+}
+body.ponto-de-retirada .pontos .card :is(p, span, b){
+    display: flex;
+    font-size: 80%;
+    opacity: 0.75;
+}
+/* 
+
+================================================
+Cadastro
+================================================
+
+*/
+body.cadastreSe .cadastro{
+    margin-top: -250px;
+}
+body.cadastreSe .cadastro h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--color-white);
+    letter-spacing: 1px;
+    font-size: 42px;
+}
+body.cadastreSe .cadastro form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1 1 1 1 1 1;
+    grid-template-areas: 
+        "name name"
+        "email tel"
+        "cep address"
+        "complement reference"
+        "date date"
+        "button button"
+    ;
+    gap: 15px;
+}
+body.cadastreSe .cadastro form > div:nth-child(1){
+    grid-area: name;
+}
+body.cadastreSe .cadastro form > div:nth-child(2){
+    grid-area: email;
+}
+body.cadastreSe .cadastro form > div:nth-child(3){
+    grid-area: tel;
+}
+body.cadastreSe .cadastro form > div:nth-child(4){
+    grid-area: cep;
+}
+body.cadastreSe .cadastro form > div:nth-child(5){
+    grid-area: address;
+}
+body.cadastreSe .cadastro form > div:nth-child(6){
+    grid-area: complement;
+}
+body.cadastreSe .cadastro form > div:nth-child(7){
+    grid-area: reference;
+}
+body.cadastreSe .cadastro form > div:nth-child(8){
+    grid-area: date;
+}
+body.cadastreSe .cadastro form > div:nth-child(9){
+    grid-area: button;
+}
+body.cadastreSe .cadastro form input{
+    appearance: none;
+    border: none;
+    width: 100%;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 18px -12px rgba(0,0,0,.5);
+    outline: none;
+}
+body.cadastreSe .cadastro form .inputGroup.address{
+    display: flex;
+    align-items: center;
+}
+body.cadastreSe .cadastro form .inputGroup.address input:nth-child(1){
+    margin-right: 15px;
+}
+body.cadastreSe .cadastro form .inputGroup.address input:nth-child(2){
+    max-width: 110px;
+}
+body.cadastreSe .cadastro form .inputGroup.dateForm{
+    margin-top: 25px;
+}
+body.cadastreSe .cadastro form .buttons{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+body.cadastreSe .cadastro form .buttons button{
+    appearance: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    background: var(--color-secundary);
+    color:var(--color-white);
+    font-size: 22px;
+    text-transform: uppercase;
+    transition: background .2s ease-in-out;
+}
+body.cadastreSe .cadastro form .buttons button.disabled{
+    filter: grayscale(1);
+    pointer-events: none;
+}
+body.cadastreSe .cadastro form .buttons button:hover{
+    background: var(--color-primary);
 }
