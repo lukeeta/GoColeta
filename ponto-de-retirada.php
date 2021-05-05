@@ -1,32 +1,16 @@
-<!DOCTYPE html>
-<html lang="pt">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pontos de Retirada</title>
+<?php 
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Ubuntu:wght@400;500&display=swap"
-        rel="stylesheet">
+    require_once 'config/functions.php';
+    require_once 'includes/header.php';
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="src/css/main.css">
-
-</head>
+?>
 <body class="ponto-de-retirada">
     
     <header class="main-menu">
 
         <nav class="menuPrincipal">
             <img src="src/img/logotipo-branco.svg" alt="GoColeta">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="sobre-nos.html">Sobre Nós</a></li>
-                <li><a href="parceiros.html">Parceiros</a></li>
-                <li><a href="contato.html">Contato</a></li>
-            </ul>
+            <?php require_once 'includes/navlinks.php'?>
         </nav>
 
     </header>
