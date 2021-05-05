@@ -28,6 +28,9 @@
             </div>
         </form>
     </div>
+    <div id="copyright">
+            Gráfica Lura - <?= date('Y')?>
+        </div>
 
 
     <!-- JQuery -->
@@ -35,6 +38,7 @@
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
     <!-- JS -->
+    <script src="src/js/login.js"></script>
 
 </body>
 

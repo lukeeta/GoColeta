@@ -88,7 +88,7 @@ const Cadastro = {
                 localStorage.setItem("dataSubmited",JSON.stringify(dataForm));
 
                 alert("Cadastrado com sucesso");
-                window.location.pathname = "login.html";
+                window.location.pathname = "login.php";
 
         })
     },

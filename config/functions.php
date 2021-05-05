@@ -39,6 +39,11 @@
                 'slug' => 'cadastro',
                 'title' => 'Cadastre-se | '.$siteData['name'],
                 'description' => ''
+            ],
+            'painel' => [
+                'slug' => 'painel',
+                'title' => 'Painel Admin | '.$siteData['name'],
+                'description' => ''
             ]
         ],
     ];

@@ -199,7 +199,7 @@ body.home #appRoot .heroContent .heroContentBtns{
     width: 100%;
     max-width: 650px;
 }
-body.home #appRoot #copyright{
+#copyright{
     text-align: center;
     margin-bottom: 15px;
 }
@@ -264,6 +264,7 @@ Cadastro
 */
 body.cadastreSe .cadastro{
     margin-top: -250px;
+    margin-bottom: 150px;
 }
 body.cadastreSe .cadastro h1{
     display: flex;
@@ -397,6 +398,7 @@ Login
 */
 body.login .login{
     margin-top: -250px;
+    margin-bottom: 150px;
 }
 body.login .login h1{
     display: flex;
@@ -454,5 +456,138 @@ body.login .login form .buttons button.disabled{
     pointer-events: none;
 }
 body.login .login form .buttons button:hover{
+    background: var(--color-primary);
+}
+/* 
+
+================================================
+Painel
+================================================
+
+*/
+body.painel .painel{
+    margin-top: -250px;
+    margin-bottom: 150px;
+}
+body.painel .painel h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--color-white);
+    letter-spacing: 1px;
+    font-size: 42px;
+}
+/* 
+
+================================================
+Sobre Nós
+================================================
+
+*/
+body.sobre .sobre{
+    margin-top: -250px;
+    margin-bottom: 150px;
+}
+body.sobre .sobre h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--color-white);
+    letter-spacing: 1px;
+    font-size: 42px;
+}
+body.sobre .sobre .text{
+    margin: 0 auto;
+    margin-top: 100px;
+    width: 95%;
+    max-width: 800px;
+}
+body.sobre .sobre .text p{
+    margin-bottom: 10px;
+}
+body.sobre .sobre .text hr{
+    margin: 25px 0;
+}
+/* 
+
+================================================
+Contato
+================================================
+
+*/
+body.contato .contato{
+    margin-top: -250px;
+    margin-bottom: 100px;
+}
+body.contato .contato h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--color-white);
+    letter-spacing: 1px;
+    font-size: 42px;
+}
+body.contato .contato form{
+    width: 95%;
+    max-width: 600px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1 1 1;
+    grid-template-areas: 
+        "name email"
+        "text text"
+        "submit submit"
+    ;
+    gap: 15px;
+}
+body.contato .contato form input,
+body.contato .contato form textarea{
+    appearance: none;
+    border: none;
+    width: 100%;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 18px -12px rgba(0,0,0,.5);
+    outline: none;
+}
+body.contato .contato form > div:nth-child(1){
+    grid-area: name;
+}
+body.contato .contato form > div:nth-child(2){
+    grid-area: email;
+}
+body.contato .contato form > div:nth-child(3){
+    grid-area: text;
+}
+body.contato .contato form > div:nth-child(4){
+    grid-area: submit;
+}
+body.contato .contato form .buttons button{
+    appearance: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    background: var(--color-secundary);
+    color:var(--color-white);
+    font-size: 22px;
+    text-transform: uppercase;
+    transition: background .2s ease-in-out;
+}
+body.contato .contato form .buttons button.disabled{
+    filter: grayscale(1);
+    pointer-events: none;
+}
+body.contato .contato form .buttons button:hover{
     background: var(--color-primary);
 }
